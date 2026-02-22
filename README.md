@@ -137,8 +137,7 @@ There are 2 esp32's acting as two different devices which are not interconnected
 2. Check the specifications to ensure compatibility (ESP32, LCDs, I2C modules, buttons, motor, buzzer).
 3. Prepare your workspace.
 
-![Step 1](images/assembly-step1.jpg)
-*Caption: All components laid out*
+
 
 ---
 
@@ -146,8 +145,7 @@ There are 2 esp32's acting as two different devices which are not interconnected
 1. Connect the 3.3V or 5V output from ESP32 to the breadboard positive rail (depending on your LCD voltage requirements).
 2. Connect ESP32 GND to breadboard negative rail.
 
-![Step 2](images/assembly-step2.jpg)
-*Caption: Power connections completed*
+
 
 ---
 
@@ -156,8 +154,7 @@ There are 2 esp32's acting as two different devices which are not interconnected
 2. Connect VCC and GND of the I2C module to the breadboard power rails.
 3. Attach the I2C module to the back of the LCD.
 
-![Step 3](images/assembly-step3.jpg)
-*Caption: LCDs connected via I2C modules*
+
 
 ---
 
@@ -165,8 +162,7 @@ There are 2 esp32's acting as two different devices which are not interconnected
 1. Place push buttons on the breadboard.
 2. Connect one side to GND and the other side to digital pins on ESP32 (e.g., GPIO 32 & 33) with pull-up resistor configuration.
 
-![Step 4](images/assembly-step4.jpg)
-*Caption: Push buttons wired for input detection*
+
 
 ---
 
@@ -175,8 +171,7 @@ There are 2 esp32's acting as two different devices which are not interconnected
 2. Connect motor GND to breadboard negative rail.
 3. Connect buzzer in a similar manner to another digital pin.
 
-![Step 5](images/assembly-step5.jpg)
-*Caption: Motor and buzzer connected*
+
 
 ---
 
@@ -185,8 +180,7 @@ There are 2 esp32's acting as two different devices which are not interconnected
 2. Ensure no short circuits.
 3. Power up the ESP32 and upload the code.
 
-![Final Build](images/final-build.jpg)
-*Caption: Completed project ready for testing*
+
 
 ---
 

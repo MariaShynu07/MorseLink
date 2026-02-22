@@ -12,8 +12,6 @@
 - Member 1: Maria Shynu - TocH Institute of Science and Technology
 - Member 2: Jisna Raju -  TocH Institute of Science and Technology
 
-### Hosted Project Link
-[mention your project hosted link here]
 
 ### Project Description
 This project presents an innovative communication solution designed to bridge the gap between individuals with different sensory abilities. By utilizing Morse Code as a universal input language, the system facilitates real-time messaging between the visually impaired, the deaf, the mute, and non-disabled users. The system leverages ESP-NOW technology for low-latency peer-to-peer wireless communication, providing feedback through visual (LCD), auditory (Buzzer), and haptic (Vibration) channels.
@@ -63,19 +61,6 @@ Simplified Single-Button Input: Replaces complex keyboards with a one-button int
 Incoming Message Alerts: Features a distinct "triple-pulse" vibration and sound pattern to notify users of a received message, ensuring they are alerted even without looking at the display.
 ---
 
-## Implementation
-
-### For Software:
-
-#### Installation
-```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
-```
-
-#### Run
-```bash
-[Run commands - e.g., npm start, python app.py]
-```
 
 ### For Hardware:
 

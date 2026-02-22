@@ -85,8 +85,8 @@ There are 2 esp32's acting as two different devices which are not interconnected
 ### For Hardware:
 
 #### Schematic & Circuit
-[device1](https://github.com/MariaShynu07/MorseLink/blob/main/WhatsApp%20Image%202026-02-22%20at%2010.53.07%20AM.jpeg)                                                                              
-[device2](https://github.com/MariaShynu07/MorseLink/blob/main/WhatsApp%20Image%202026-02-22%20at%2010.53.07%20AM%20(1).jpeg) 
+![device1](https://github.com/MariaShynu07/MorseLink/blob/main/WhatsApp%20Image%202026-02-22%20at%2010.53.07%20AM.jpeg)                                                                              
+![device2](https://github.com/MariaShynu07/MorseLink/blob/main/WhatsApp%20Image%202026-02-22%20at%2010.53.07%20AM%20(1).jpeg) 
 *simple circuit as shown*
 
 ![Schematic](https://github.com/MariaShynu07/MorseLink/blob/main/IMG-20260222-WA0019.jpg)

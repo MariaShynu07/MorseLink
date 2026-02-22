@@ -2,27 +2,28 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# MorseLink 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: SparX
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: Maria Shynu - TocH Institute of Science and Technology
+- Member 2: Jisna Raju -  TocH Institute of Science and Technology
 
 ### Hosted Project Link
 [mention your project hosted link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+This project presents an innovative communication solution designed to bridge the gap between individuals with different sensory abilities. By utilizing Morse Code as a universal input language, the system facilitates real-time messaging between the visually impaired, the deaf, the mute, and non-disabled users. The system leverages ESP-NOW technology for low-latency peer-to-peer wireless communication, providing feedback through visual (LCD), auditory (Buzzer), and haptic (Vibration) channels.
 
 ### The Problem statement
-[What problem are you solving?]
+In this mordern era most of us take for granted that we can just "see" a text or "hear" a voice, but for a huge group of people, those channels are completely blocked. When a blind person and a deaf person need to talk to each other, they’re often stuck in "sensory silos" because a device that helps one usually ignores the other. Most of the tech out there that actually fixes this is either way too expensive or so complicated you need a manual just to say "hello." Our project steps in to fix that by making communication a physical, universal felt experience that doesn't care whether you can see, hear, or speak—it just works for everyone.
 
 ### The Solution
-[How are you solving it?]
+The solution is a Universal Communication System that strips communication down to its simplest form: timing and touch using a universal language- Morse Code. Instead of forcing users to adapt to complex screens or sounds, the device adapts to the user by turning a single button-press into a simultaneous "triple-threat" output.
+By using the ESP32 to broadcast messages over ESP-NOW, we've created a system that doesn't need Wi-Fi to work—it's just one device talking directly to another. This means a blind user can "hear" the message through the buzzer, a deaf user can "read" it on the LCD, and a deaf-blind user can "feel" it through the vibration motor, all at the same time.
 
 ---
 
@@ -31,26 +32,35 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+
+Languages used: C++ (Arduino Framework) for microcontroller logic.
+Protocols used: * ESP-NOW: For low-latency, peer-to-peer wireless communication.
+I2C (Inter-Integrated Circuit): To minimize wiring for the LCD interface.
+Libraries used:
+  -esp_now.h & WiFi.h: For wireless data transmission.
+  -LiquidCrystal_I2C.h: For display management.
+  -Wire.h: For I2C communication.
+Tools used: Arduino IDE (for coding and debugging), Serial Monitor (for real-time logic testing).
 
 **For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
+
+- Main components: ESP32 DevKit V1,16x2 LCD with I2C Module,Tactile Push Button,Vibration Motor,Active/Passive Buzzer
+- Specifications:
+                Wireless Range: Approx. 100-200 meters (Open space via ESP-NOW).
+                Operating Voltage: 3.3V (Logic) and 5V (LCD/Motor).
+                Input Latency: < 50ms for real-time feedback.
+                Morse Thresholds: Dot (\le 400ms), Dash (> 400ms).
+- Tools required: Soldering iron and lead,Breadboard and Jumper wires, Multimeter
 
 ---
 
 ## Features
 
-List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
-
+Universal Multi-Sensory Output: Simultaneously delivers messages via Text (LCD), Sound (Buzzer), and Vibration (Haptic Motor), ensuring the system is fully accessible to the visually impaired, deaf, mute, and deaf-blind.
+Real-Time Tactile Verification: Provides instant haptic and auditory feedback during the input process, allowing users to "feel" and "hear" their Morse code as they type for improved accuracy.
+Infrastructure-Free Communication: Uses the ESP-NOW protocol for direct, peer-to-peer wireless transmission, allowing units to communicate instantly without needing Wi-Fi, routers, or cellular networks.
+Simplified Single-Button Input: Replaces complex keyboards with a one-button interface that uses a timing-based engine to decode dots and dashes into English characters automatically.
+Incoming Message Alerts: Features a distinct "triple-pulse" vibration and sound pattern to notify users of a received message, ensuring they are alerted even without looking at the display.
 ---
 
 ## Implementation
@@ -70,41 +80,22 @@ List the key features of your project:
 ### For Hardware:
 
 #### Components Required
-[List all components needed with specifications]
+ Main components: 
+ ESP32 DevKit V1
+ 16x2 LCD with I2C Module 
+ Tactile Push Button 
+ Vibration Motor 2mm thickness 100mA current flow
+ Active/Passive Buzzer
+
 
 #### Circuit Setup
-[Explain how to set up the circuit]
+There are 2 esp32's acting as two different devices which are not interconnected but induvidually connected to a 16x2 I2C LCD via SDA (Pin 21) and SCL (Pin 22) for visual output. A tactile button (Pin 18) uses an internal pull-up for Morse input. For accessibility,Pin 15 of one esp32 drives a vibration motor and other esp32 runs buzzer simultaneously, providing haptic and audio feedback..
+
 
 ---
 
 ## Project Documentation
 
-### For Software:
-
-#### Screenshots (Add at least 3)
-
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
-
-#### Diagrams
-
-**System Architecture:**
-
-![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
-
-**Application Workflow:**
-
-![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
-
----
 
 ### For Hardware:
 
@@ -133,228 +124,91 @@ List the key features of your project:
 
 ## Additional Documentation
 
-### For Web Projects with Backend:
-
-#### API Documentation
-
-**Base URL:** `https://api.yourproject.com`
-
-##### Endpoints
-
-**GET /api/endpoint**
-- **Description:** [What it does]
-- **Parameters:**
-  - `param1` (string): [Description]
-  - `param2` (integer): [Description]
-- **Response:**
-```json
-{
-  "status": "success",
-  "data": {}
-}
-```
-
-**POST /api/endpoint**
-- **Description:** [What it does]
-- **Request Body:**
-```json
-{
-  "field1": "value1",
-  "field2": "value2"
-}
-```
-- **Response:**
-```json
-{
-  "status": "success",
-  "message": "Operation completed"
-}
-```
-
-[Add more endpoints as needed...]
-
----
-
-### For Mobile Apps:
-
-#### App Flow Diagram
-
-![App Flow](docs/app-flow.png)
-*Explain the user flow through your application*
-
-#### Installation Guide
-
-**For Android (APK):**
-1. Download the APK from [Release Link]
-2. Enable "Install from Unknown Sources" in your device settings:
-   - Go to Settings > Security
-   - Enable "Unknown Sources"
-3. Open the downloaded APK file
-4. Follow the installation prompts
-5. Open the app and enjoy!
-
-**For iOS (IPA) - TestFlight:**
-1. Download TestFlight from the App Store
-2. Open this TestFlight link: [Your TestFlight Link]
-3. Click "Install" or "Accept"
-4. Wait for the app to install
-5. Open the app from your home screen
-
-**Building from Source:**
-```bash
-# For Android
-flutter build apk
-# or
-./gradlew assembleDebug
-
-# For iOS
-flutter build ios
-# or
-xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug
-```
-
 ---
 
 ### For Hardware Projects:
 
 #### Bill of Materials (BOM)
 
-| Component | Quantity | Specifications | Price | Link/Source |
-|-----------|----------|----------------|-------|-------------|
-| Arduino Uno | 1 | ATmega328P, 16MHz | ₹450 | [Link] |
-| LED | 5 | Red, 5mm, 20mA | ₹5 each | [Link] |
-| Resistor | 5 | 220Ω, 1/4W | ₹1 each | [Link] |
-| Breadboard | 1 | 830 points | ₹100 | [Link] |
-| Jumper Wires | 20 | Male-to-Male | ₹50 | [Link] |
-| [Add more...] | | | | |
+| **Component**                                                  | **Quantity** | **Specifications / Notes**           | **Approx Price (₹)** | **Link / Source**                             |
+| -------------------------------------------------------------- | ------------ | ------------------------------------ | -------------------- | --------------------------------------------- |
+| **[ESP32 DEVKITV1 30 Pin CP2102 NodeMCU Development Board]()** | 2            | ESP32 Dev Kit V1 (Wi‑Fi & Bluetooth) | ~₹369 each           | Buy on Indian Hobby Center                    |
+| **[Yellow Green 16x2 I2C LCD Display Module]()**               | 1            | 16×2 LCD with I2C adapter            | ~₹77                 | Great budget choice                           |
+| **[Original JHD 16x4 Character LCD Display]()**                | 1            | 16×4 Character LCD                   | ~₹499                | Standard LCD                                  |
+| **[I2C LCD Interface Module]()**                               | 2            | I2C interface for LCDs               | ~₹45 each            | For 16×2 & can be used on 16×4 (if supported) |
+| **[PBS-06-112-25-Push Button Switch-2 Pin]()**                 | 2            | Basic push button switches           | ~₹8 each             | Small tactile switches                        |
+| **[Vibration Motor]()**                                        | 1            | Small vibration motor                | ~₹41                 | For alerts/haptics                            |
+| **[Buzzer with Wire 6V - 12V DC]()**                           | 1            | Basic DC buzzer (sound)              | ~₹26                 | Standard buzzer                               |
 
-**Total Estimated Cost:** ₹[Amount]
 
-#### Assembly Instructions
+**Total Estimated Cost:** ₹1,610
 
-**Step 1: Prepare Components**
-1. Gather all components listed in the BOM
-2. Check component specifications
-3. Prepare your workspace
+---
+
+## Assembly Instructions
+
+### Step 1: Prepare Components
+1. Gather all components from the BOM.
+2. Check the specifications to ensure compatibility (ESP32, LCDs, I2C modules, buttons, motor, buzzer).
+3. Prepare your workspace.
+
 ![Step 1](images/assembly-step1.jpg)
 *Caption: All components laid out*
 
-**Step 2: Build the Power Supply**
-1. Connect the power rails on the breadboard
-2. Connect Arduino 5V to breadboard positive rail
-3. Connect Arduino GND to breadboard negative rail
+---
+
+### Step 2: Build the Power Supply
+1. Connect the 3.3V or 5V output from ESP32 to the breadboard positive rail (depending on your LCD voltage requirements).
+2. Connect ESP32 GND to breadboard negative rail.
+
 ![Step 2](images/assembly-step2.jpg)
 *Caption: Power connections completed*
 
-**Step 3: Add Components**
-1. Place LEDs on breadboard
-2. Connect resistors in series with LEDs
-3. Connect LED cathodes to GND
-4. Connect LED anodes to Arduino digital pins (2-6)
+---
+
+### Step 3: Connect the LCDs via I2C
+1. Connect SDA and SCL pins of each I2C module to ESP32 SDA and SCL pins (usually GPIO 21 & 22).
+2. Connect VCC and GND of the I2C module to the breadboard power rails.
+3. Attach the I2C module to the back of the LCD.
+
 ![Step 3](images/assembly-step3.jpg)
-*Caption: LED circuit assembled*
+*Caption: LCDs connected via I2C modules*
 
-**Step 4: [Continue for all steps...]**
+---
 
-**Final Assembly:**
+### Step 4: Add Push Buttons
+1. Place push buttons on the breadboard.
+2. Connect one side to GND and the other side to digital pins on ESP32 (e.g., GPIO 32 & 33) with pull-up resistor configuration.
+
+![Step 4](images/assembly-step4.jpg)
+*Caption: Push buttons wired for input detection*
+
+---
+
+### Step 5: Connect Vibration Motor and Buzzer
+1. Connect the positive terminal of the vibration motor to a digital pin via a transistor if needed (ESP32 cannot drive directly).
+2. Connect motor GND to breadboard negative rail.
+3. Connect buzzer in a similar manner to another digital pin.
+
+![Step 5](images/assembly-step5.jpg)
+*Caption: Motor and buzzer connected*
+
+---
+
+### Step 6: Final Connections
+1. Check all connections: power, I2C, digital pins, buttons, motor, buzzer.
+2. Ensure no short circuits.
+3. Power up the ESP32 and upload the code.
+
 ![Final Build](images/final-build.jpg)
 *Caption: Completed project ready for testing*
 
 ---
 
-### For Scripts/CLI Tools:
-
-#### Command Reference
-
-**Basic Usage:**
-```bash
-python script.py [options] [arguments]
-```
-
-**Available Commands:**
-- `command1 [args]` - Description of what command1 does
-- `command2 [args]` - Description of what command2 does
-- `command3 [args]` - Description of what command3 does
-
-**Options:**
-- `-h, --help` - Show help message and exit
-- `-v, --verbose` - Enable verbose output
-- `-o, --output FILE` - Specify output file path
-- `-c, --config FILE` - Specify configuration file
-- `--version` - Show version information
-
-**Examples:**
-
-```bash
-# Example 1: Basic usage
-python script.py input.txt
-
-# Example 2: With verbose output
-python script.py -v input.txt
-
-# Example 3: Specify output file
-python script.py -o output.txt input.txt
-
-# Example 4: Using configuration
-python script.py -c config.json --verbose input.txt
-```
-
-#### Demo Output
-
-**Example 1: Basic Processing**
-
-**Input:**
-```
-This is a sample input file
-with multiple lines of text
-for demonstration purposes
-```
-
-**Command:**
-```bash
-python script.py sample.txt
-```
-
-**Output:**
-```
-Processing: sample.txt
-Lines processed: 3
-Characters counted: 86
-Status: Success
-Output saved to: output.txt
-```
-
-**Example 2: Advanced Usage**
-
-**Input:**
-```json
-{
-  "name": "test",
-  "value": 123
-}
-```
-
-**Command:**
-```bash
-python script.py -v --format json data.json
-```
-
-**Output:**
-```
-[VERBOSE] Loading configuration...
-[VERBOSE] Parsing JSON input...
-[VERBOSE] Processing data...
-{
-  "status": "success",
-  "processed": true,
-  "result": {
-    "name": "test",
-    "value": 123,
-    "timestamp": "2024-02-07T10:30:00"
-  }
-}
-[VERBOSE] Operation completed in 0.23s
-```
+## Notes
+- Use **I2C modules** for simpler wiring and to save ESP32 GPIO pins.
+- Use transistors if the vibration motor or buzzer requires more current than ESP32 pins can safely provide.
+- Adjust **digital pins** in the code as per your wiring.
 
 ---
 
@@ -374,46 +228,25 @@ python script.py -v --format json data.json
 
 If you used AI tools during development, document them here for transparency:
 
-**Tool Used:** [e.g., GitHub Copilot, v0.dev, Cursor, ChatGPT, Claude]
+**Tool Used:** ChatGPT, Claude,Gemini
 
 **Purpose:** [What you used it for]
-- Example: "Generated boilerplate React components"
-- Example: "Debugging assistance for async functions"
-- Example: "Code review and optimization suggestions"
+- Generating code
+- debugging assistance
+- finalsuggestions
 
-**Key Prompts Used:**
-- "Create a REST API endpoint for user authentication"
-- "Debug this async function that's causing race conditions"
-- "Optimize this database query for better performance"
-
-**Percentage of AI-generated code:** [Approximately X%]
+**Percentage of AI-generated code:** 60%
 
 **Human Contributions:**
-- Architecture design and planning
-- Custom business logic implementation
+- idea generation and execution
+- circuit designing
 - Integration and testing
-- UI/UX design decisions
-
-*Note: Proper documentation of AI usage demonstrates transparency and earns bonus points in evaluation!*
-
----
 
 ## Team Contributions
 
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
+- Maria Shynu: integration and coding
+- Jisna Raju: Integration , documentation and testing 
 
----
-
-## License
-
-This project is licensed under the [LICENSE_NAME] License - see the [LICENSE](LICENSE) file for details.
-
-**Common License Options:**
-- MIT License (Permissive, widely used)
-- Apache 2.0 (Permissive with patent grant)
-- GPL v3 (Copyleft, requires derivative works to be open source)
 
 ---
 

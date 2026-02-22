@@ -85,11 +85,11 @@ There are 2 esp32's acting as two different devices which are not interconnected
 ### For Hardware:
 
 #### Schematic & Circuit
-(https://github.com/MariaShynu07/MorseLink/blob/main/WhatsApp%20Image%202026-02-22%20at%2010.53.07%20AM.jpeg)                                                                               *device1 *
-(https://github.com/MariaShynu07/MorseLink/blob/main/WhatsApp%20Image%202026-02-22%20at%2010.53.07%20AM%20(1).jpeg) *device2 *
+[device1](https://github.com/MariaShynu07/MorseLink/blob/main/WhatsApp%20Image%202026-02-22%20at%2010.53.07%20AM.jpeg)                                                                              
+[device2](https://github.com/MariaShynu07/MorseLink/blob/main/WhatsApp%20Image%202026-02-22%20at%2010.53.07%20AM%20(1).jpeg) 
 *simple circuit as shown*
 
-![Schematic](https://github.com/MariaShynu07/MorseLink/blob/main/image.png)
+![Schematic](https://github.com/MariaShynu07/MorseLink/blob/main/IMG-20260222-WA0019.jpg)
 *esp now protocol illustration*
 
 #### Build Photos
@@ -99,17 +99,15 @@ There are 2 esp32's acting as two different devices which are not interconnected
 ![Components](https://github.com/MariaShynu07/MorseLink/blob/main/esp.jfif)
 *List out all components shown*
 
-![Build]()
+![Build](https://github.com/MariaShynu07/MorseLink/blob/main/IMG-20260222-WA0032.jpg)
 *Explain the build steps*
 
-![Final](Add photo of final product here)
+![Final](https://github.com/MariaShynu07/MorseLink/blob/main/IMG-20260222-WA0034.jpg)
 *Explain the final build*
 
 ---
 
-## Additional Documentation
 
----
 
 ### For Hardware Projects:
 

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./img.png" alt="Project Banner" width="100%">
+  <img src="https://github.com/MariaShynu07/MorseLink/blob/main/WhatsApp%20Image%202026-02-22%20at%2010.53.06%20AM.jpeg" alt="Project Banner" width="100%">
 </p>
 
 # MorseLink 🎯
@@ -95,7 +95,7 @@ There are 2 esp32's acting as two different devices which are not interconnected
 #### Build Photos
 
 ![Team](https://github.com/MariaShynu07/MorseLink/blob/main/IMG-20260222-WA0021.jpg)
-
+*team photo
 ![Components](https://github.com/MariaShynu07/MorseLink/blob/main/esp.jfif)
 *List out all components shown*
 

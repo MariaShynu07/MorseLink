@@ -97,6 +97,9 @@ There are 2 esp32's acting as two different devices which are not interconnected
 ![Team](https://github.com/MariaShynu07/MorseLink/blob/main/IMG-20260222-WA0021.jpg)
 *team photo
 ![Components](https://github.com/MariaShynu07/MorseLink/blob/main/esp.jfif)
+(https://github.com/MariaShynu07/MorseLink/blob/main/buzzer.jpg)
+(https://github.com/MariaShynu07/MorseLink/blob/main/i2c.jpg)
+(https://github.com/MariaShynu07/MorseLink/blob/main/push%20button.jpg)
 *List out all components shown*
 
 ![Build](https://github.com/MariaShynu07/MorseLink/blob/main/IMG-20260222-WA0032.jpg)

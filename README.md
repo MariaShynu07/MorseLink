@@ -85,8 +85,8 @@ There are 2 esp32's acting as two different devices which are not interconnected
 ### For Hardware:
 
 #### Schematic & Circuit
-(https://github.com/MariaShynu07/MorseLink/blob/main/WhatsApp%20Image%202026-02-22%20at%2010.53.07%20AM.jpeg)(device1)
-(https://github.com/MariaShynu07/MorseLink/blob/main/WhatsApp%20Image%202026-02-22%20at%2010.53.07%20AM%20(1).jpeg)(device2)
+(https://github.com/MariaShynu07/MorseLink/blob/main/WhatsApp%20Image%202026-02-22%20at%2010.53.07%20AM.jpeg)                                                                               *device1 *
+(https://github.com/MariaShynu07/MorseLink/blob/main/WhatsApp%20Image%202026-02-22%20at%2010.53.07%20AM%20(1).jpeg) *device2 *
 *simple circuit as shown*
 
 ![Schematic](https://github.com/MariaShynu07/MorseLink/blob/main/image.png)
@@ -94,12 +94,12 @@ There are 2 esp32's acting as two different devices which are not interconnected
 
 #### Build Photos
 
-![Team](Add photo of your team here)
+![Team](https://github.com/MariaShynu07/MorseLink/blob/main/IMG-20260222-WA0021.jpg)
 
-![Components](Add photo of your components here)
+![Components](https://github.com/MariaShynu07/MorseLink/blob/main/esp.jfif)
 *List out all components shown*
 
-![Build](Add photos of build process here)
+![Build]()
 *Explain the build steps*
 
 ![Final](Add photo of final product here)
@@ -194,12 +194,9 @@ There are 2 esp32's acting as two different devices which are not interconnected
 ## Project Demo
 
 ### Video
-[Add your demo video link here - YouTube, Google Drive, etc.]
+https://drive.google.com/drive/folders/1F7IwyDlzyc2HMSCEchETgAZkIy40c6NC
 
 *Explain what the video demonstrates - key features, user flow, technical highlights*
-
-### Additional Demos
-[Add any extra demo materials/links - Live site, APK download, online demo, etc.]
 
 ---
 
